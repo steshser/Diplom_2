@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="add README.md and update pom.xml">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ingredients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/IngredientsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RefreshToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserCredentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestLoginExistingUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestLoginInvalidData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestRegisterExistingUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestRegisterUserWithoutData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestRegisterValidUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestUpdateAuthorizedUserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestUpdateUnauthorizedUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +55,79 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Diplom_2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Diplom_2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestUpdateUnauthorizedUserData.unauthorizedUserCanNotUpdateName">
+    <configuration name="TestUpdateAuthorizedUserData.userCanBeCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateAuthorizedUserData" />
+      <option name="METHOD_NAME" value="userCanBeCreated" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpdateAuthorizedUserData.userCanBeUpdateName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateAuthorizedUserData" />
+      <option name="METHOD_NAME" value="userCanBeUpdateName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpdateUnauthorizedUserData.unauthorizedUserCanNotUpdateEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateUnauthorizedUserData" />
+      <option name="METHOD_NAME" value="unauthorizedUserCanNotUpdateEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpdateUnauthorizedUserData.unauthorizedUserCanNotUpdateName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateUnauthorizedUserData" />
+      <option name="METHOD_NAME" value="unauthorizedUserCanNotUpdateName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpdateUnauthorizedUserData.userCanBeUpdateEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateUnauthorizedUserData" />
+      <option name="METHOD_NAME" value="userCanBeUpdateEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestUpdateUnauthorizedUserData.unauthorizedUserCanNotUpdateName" />
+        <item itemvalue="JUnit.TestUpdateUnauthorizedUserData.unauthorizedUserCanNotUpdateEmail" />
+        <item itemvalue="JUnit.TestUpdateUnauthorizedUserData.userCanBeUpdateEmail" />
+        <item itemvalue="JUnit.TestUpdateAuthorizedUserData.userCanBeUpdateName" />
+        <item itemvalue="JUnit.TestUpdateAuthorizedUserData.userCanBeCreated" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,6 +137,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669727378422</updated>
     </task>
+    <task id="LOCAL-00001" summary="add README.md and update pom.xml">
+      <created>1669728763427</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669728763427</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -64,5 +157,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add README.md and update pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add README.md and update pom.xml" />
   </component>
 </project>
