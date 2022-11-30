@@ -1,20 +1,21 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ingredients {
-    private List<String> ingredients;
+    private ArrayList<String> ingredients;
 
-    public Ingredients(List<String> ingredients) {
+    public Ingredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
     }
 
     public Ingredients() {
     }
 
-    public List<String> getIngredients() {
+    public ArrayList<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<String> ingredients) {
+    public void setIngredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
     }
 }

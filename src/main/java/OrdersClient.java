@@ -1,9 +1,4 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import io.restassured.RestAssured;
 import io.restassured.response.ValidatableResponse;
-
-import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -36,10 +31,37 @@ public class OrdersClient extends Client{
                 .then();
     }
 
-    public ValidatableResponse createOrder(Ingredients ingredients) {
+    public ValidatableResponse createOrderUnauthorizedUserWithIngredients(Ingredients ingredients) {
         return given()
                 .spec(getSpec())
                 .body(ingredients)
+                .when()
+                .post(ORDERS_PATH)
+                .then();
+    }
+
+    public ValidatableResponse createOrderAuthorizedUserWithIngredients(String accessToken, Ingredients ingredients) {
+        return given()
+                .spec(getSpec())
+                .header("authorization", accessToken)
+                .body(ingredients)
+                .when()
+                .post(ORDERS_PATH)
+                .then();
+    }
+
+    public ValidatableResponse createOrderUnauthorizedUserWithoutIngredients() {
+        return given()
+                .spec(getSpec())
+                .when()
+                .post(ORDERS_PATH)
+                .then();
+    }
+
+    public ValidatableResponse createOrderAuthorizedUserWithoutIngredients(String accessToken) {
+        return given()
+                .spec(getSpec())
+                .header("authorization", accessToken)
                 .when()
                 .post(ORDERS_PATH)
                 .then();
