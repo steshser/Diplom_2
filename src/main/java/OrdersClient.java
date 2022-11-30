@@ -20,6 +20,14 @@ public class OrdersClient extends Client{
                 .then();
     }
 
+    public ValidatableResponse getUnauthorizedUserOrders() {
+        return given()
+                .spec(getSpec())
+                .when()
+                .get(ORDERS_PATH)
+                .then();
+    }
+
     public ValidatableResponse getAllOrders() {
         return given()
                 .spec(getSpec())
