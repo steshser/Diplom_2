@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="add tests for create order cases">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithoutAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithoutAuthorization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestUpdateAuthorizedUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUpdateAuthorizedUserData.java" afterDir="false" />
-    </list>
+    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="add update email to same test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,16 +48,7 @@
       <recent name="C:\Users\User\IdeaProjects\Diplom_2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToSame">
-    <configuration name="TestRegisterUserWithoutData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestRegisterUserWithoutData" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToExisting">
     <configuration name="TestRegisterValidUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
@@ -76,6 +63,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestUpdateAuthorizedUserData" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToExisting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateAuthorizedUserData" />
+      <option name="METHOD_NAME" value="userCanNotBeUpdateEmailToExisting" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,11 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToExisting" />
         <item itemvalue="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToSame" />
         <item itemvalue="JUnit.TestUpdateUnauthorizedUserData" />
         <item itemvalue="JUnit.TestUpdateAuthorizedUserData" />
         <item itemvalue="JUnit.TestRegisterValidUser" />
-        <item itemvalue="JUnit.TestRegisterUserWithoutData" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669842560352</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add update email to same test">
+      <created>1670157451244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670157451244</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +161,7 @@
     <MESSAGE value="add README.md and update pom.xml" />
     <MESSAGE value="add tests for orders endpoints" />
     <MESSAGE value="add tests for create order cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tests for create order cases" />
+    <MESSAGE value="add update email to same test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add update email to same test" />
   </component>
 </project>

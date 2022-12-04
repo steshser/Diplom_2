@@ -40,14 +40,15 @@ public class TestUpdateAuthorizedUserData {
     }
 
     @Test
-    @Step("Update email to same")
-    public void userCanNotBeUpdateEmailToSame(){
+    @Step("Update email to existing")
+    public void userCanNotBeUpdateEmailToExisting(){
         ValidatableResponse responseRegister = userClient.register(user);
         int actualStatusCodeCreate = responseRegister.extract().statusCode();
         boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
         assertEquals(200, actualStatusCodeCreate);
         assertTrue(isSuccessInMessageTrueCreate);
+        user.setEmail("steshov.sergey@yandex.ru");
         ValidatableResponse responseUpdateName = userClient.updateAuthorizedUserData(accessToken, UserData.from(user));
         int actualStatusCodeChange = responseUpdateName.extract().statusCode();
         boolean isSuccessInMessageTrueChange = responseUpdateName.extract().path("success");
