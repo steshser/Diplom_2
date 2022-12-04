@@ -19,8 +19,8 @@ public class TestUpdateAuthorizedUserData {
     }
 
     @Test
-    @Step("Update email")
-    public void userCanBeUpdateEmail(){
+    @Step("Update email to different")
+    public void userCanBeUpdateEmailToDifferent(){
         ValidatableResponse responseRegister = userClient.register(user);
         int actualStatusCodeCreate = responseRegister.extract().statusCode();
         boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
@@ -37,6 +37,24 @@ public class TestUpdateAuthorizedUserData {
         assertEquals(200, actualStatusCodeChange);
         assertTrue(isSuccessInMessageTrueChange);
         assertEquals(changedEmail, responseEmail);
+    }
+
+    @Test
+    @Step("Update email to same")
+    public void userCanNotBeUpdateEmailToSame(){
+        ValidatableResponse responseRegister = userClient.register(user);
+        int actualStatusCodeCreate = responseRegister.extract().statusCode();
+        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
+        accessToken = responseRegister.extract().path("accessToken");
+        assertEquals(200, actualStatusCodeCreate);
+        assertTrue(isSuccessInMessageTrueCreate);
+        ValidatableResponse responseUpdateName = userClient.updateAuthorizedUserData(accessToken, UserData.from(user));
+        int actualStatusCodeChange = responseUpdateName.extract().statusCode();
+        boolean isSuccessInMessageTrueChange = responseUpdateName.extract().path("success");
+        String responseMessage = responseUpdateName.extract().path("message");
+        assertEquals(403, actualStatusCodeChange);
+        assertFalse(isSuccessInMessageTrueChange);
+        assertEquals("User with such email already exists", responseMessage);
     }
 
     @Test

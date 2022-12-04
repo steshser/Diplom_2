@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="add tests for orders endpoints">
-      <change afterPath="$PROJECT_DIR$/src/main/java/IngredientsGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithAuthorization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithoutAuthorization.java" afterDir="false" />
+    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="add tests for create order cases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ingredients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ingredients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OrdersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrdersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestGetUnauthorizedUserOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestGetUnauthorizedUserOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithoutAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithoutAuthorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestUpdateAuthorizedUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUpdateAuthorizedUserData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +26,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2IDsEPqjcr2MaJcmREwRFP0zkOw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -53,64 +52,60 @@
       <recent name="C:\Users\User\IdeaProjects\Diplom_2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCreateOrderWithoutAuthorization.unauthorizedUserCanNotCreateOrderWithoutIngredients">
-    <configuration name="TestCreateOrderWithAuthorization.authorizedUserCanNotCreateOrderWithInvalidIngredients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToSame">
+    <configuration name="TestRegisterUserWithoutData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCreateOrderWithAuthorization" />
-      <option name="METHOD_NAME" value="authorizedUserCanNotCreateOrderWithInvalidIngredients" />
+      <option name="MAIN_CLASS_NAME" value="TestRegisterUserWithoutData" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRegisterValidUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRegisterValidUser" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpdateAuthorizedUserData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateAuthorizedUserData" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToSame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateAuthorizedUserData" />
+      <option name="METHOD_NAME" value="userCanNotBeUpdateEmailToSame" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCreateOrderWithAuthorization.authorizedUserCanNotCreateOrderWithoutIngredients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUpdateUnauthorizedUserData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCreateOrderWithAuthorization" />
-      <option name="METHOD_NAME" value="authorizedUserCanNotCreateOrderWithoutIngredients" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCreateOrderWithoutAuthorization.unauthorizedUserCanCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCreateOrderWithoutAuthorization" />
-      <option name="METHOD_NAME" value="unauthorizedUserCanCreateOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCreateOrderWithoutAuthorization.unauthorizedUserCanNotCreateOrderWithInvalidIngredients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCreateOrderWithoutAuthorization" />
-      <option name="METHOD_NAME" value="unauthorizedUserCanNotCreateOrderWithInvalidIngredients" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCreateOrderWithoutAuthorization.unauthorizedUserCanNotCreateOrderWithoutIngredients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCreateOrderWithoutAuthorization" />
-      <option name="METHOD_NAME" value="unauthorizedUserCanNotCreateOrderWithoutIngredients" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="TestUpdateUnauthorizedUserData" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestCreateOrderWithoutAuthorization.unauthorizedUserCanNotCreateOrderWithoutIngredients" />
-        <item itemvalue="JUnit.TestCreateOrderWithoutAuthorization.unauthorizedUserCanNotCreateOrderWithInvalidIngredients" />
-        <item itemvalue="JUnit.TestCreateOrderWithAuthorization.authorizedUserCanNotCreateOrderWithoutIngredients" />
-        <item itemvalue="JUnit.TestCreateOrderWithAuthorization.authorizedUserCanNotCreateOrderWithInvalidIngredients" />
-        <item itemvalue="JUnit.TestCreateOrderWithoutAuthorization.unauthorizedUserCanCreateOrder" />
+        <item itemvalue="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToSame" />
+        <item itemvalue="JUnit.TestUpdateUnauthorizedUserData" />
+        <item itemvalue="JUnit.TestUpdateAuthorizedUserData" />
+        <item itemvalue="JUnit.TestRegisterValidUser" />
+        <item itemvalue="JUnit.TestRegisterUserWithoutData" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669830387630</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add tests for create order cases">
+      <created>1669842560352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669842560352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +156,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add README.md and update pom.xml" />
     <MESSAGE value="add tests for orders endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tests for orders endpoints" />
+    <MESSAGE value="add tests for create order cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests for create order cases" />
   </component>
 </project>

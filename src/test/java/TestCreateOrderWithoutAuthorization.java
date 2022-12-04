@@ -47,8 +47,6 @@ public class TestCreateOrderWithoutAuthorization {
     @Test
     @Step("Create order by unauthorized user with without ingredients")
     public void unauthorizedUserCanNotCreateOrderWithoutIngredients() {
-        Ingredients ingredients = IngredientsGenerator.getInvalidIngredientsHash();
-        // create order
         ValidatableResponse responseCreateOrder = ordersClient.createOrderUnauthorizedUserWithoutIngredients();
         int actualStatusCodeCreateOrder = responseCreateOrder.extract().statusCode();
         boolean isSuccessInMessageFalseCreateOrder = responseCreateOrder.extract().path("success");
