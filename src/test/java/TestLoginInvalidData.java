@@ -1,8 +1,11 @@
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class TestLoginInvalidData {
     private UserClient userClient;
@@ -14,7 +17,7 @@ public class TestLoginInvalidData {
     }
 
     @Test
-    @Step("Login invalid email user")
+    @DisplayName("Login invalid email user")
     public void userCanNotLoginWithInvalidEmail() {
         User user = UserGenerator.getChangedEmailUser();
         ValidatableResponse responseLogin = userClient.login(UserCredentials.from(user));
@@ -27,7 +30,7 @@ public class TestLoginInvalidData {
     }
 
     @Test
-    @Step("Login invalid password user")
+    @DisplayName("Login invalid password user")
     public void userCanNotLoginWithInvalidPassword() {
         User user = UserGenerator.getChangedPasswordUser();
         ValidatableResponse responseLogin = userClient.login(UserCredentials.from(user));

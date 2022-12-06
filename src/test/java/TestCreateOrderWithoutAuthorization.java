@@ -1,7 +1,9 @@
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -20,7 +22,7 @@ public class TestCreateOrderWithoutAuthorization {
     }
 
     @Test
-    @Step("Create order by unauthorized user")
+    @DisplayName("Create order by unauthorized user")
     public void unauthorizedUserCanCreateOrder() {
         // create order with all ingredients
         ValidatableResponse responseIngredients = ingredientsClient.getIngredients();
@@ -35,7 +37,7 @@ public class TestCreateOrderWithoutAuthorization {
     }
 
     @Test
-    @Step("Create order by unauthorized user with invalid ingredients hash")
+    @DisplayName("Create order by unauthorized user with invalid ingredients hash")
     public void unauthorizedUserCanNotCreateOrderWithInvalidIngredients() {
         Ingredients ingredients = IngredientsGenerator.getInvalidIngredientsHash();
         // create order
@@ -45,7 +47,7 @@ public class TestCreateOrderWithoutAuthorization {
     }
 
     @Test
-    @Step("Create order by unauthorized user with without ingredients")
+    @DisplayName("Create order by unauthorized user with without ingredients")
     public void unauthorizedUserCanNotCreateOrderWithoutIngredients() {
         ValidatableResponse responseCreateOrder = ordersClient.createOrderUnauthorizedUserWithoutIngredients();
         int actualStatusCodeCreateOrder = responseCreateOrder.extract().statusCode();

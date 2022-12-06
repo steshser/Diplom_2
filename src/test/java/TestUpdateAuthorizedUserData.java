@@ -1,9 +1,12 @@
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.util.HashMap;
+
 import static org.junit.Assert.*;
 
 public class TestUpdateAuthorizedUserData {
@@ -19,14 +22,10 @@ public class TestUpdateAuthorizedUserData {
     }
 
     @Test
-    @Step("Update email to different")
-    public void userCanBeUpdateEmailToDifferent(){
+    @DisplayName("Update email to different")
+    public void userCanBeUpdateEmailToDifferent() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         User changedUser = UserGenerator.getChangedEmailUser();
         String changedEmail = changedUser.getEmail();
         ValidatableResponse responseUpdateName = userClient.updateAuthorizedUserData(accessToken, UserData.from(changedUser));
@@ -40,14 +39,10 @@ public class TestUpdateAuthorizedUserData {
     }
 
     @Test
-    @Step("Update email to existing")
-    public void userCanNotBeUpdateEmailToExisting(){
+    @DisplayName("Update email to existing")
+    public void userCanNotBeUpdateEmailToExisting() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         user.setEmail("steshov.sergey@yandex.ru");
         ValidatableResponse responseUpdateName = userClient.updateAuthorizedUserData(accessToken, UserData.from(user));
         int actualStatusCodeChange = responseUpdateName.extract().statusCode();
@@ -59,14 +54,10 @@ public class TestUpdateAuthorizedUserData {
     }
 
     @Test
-    @Step("Update name")
-    public void userCanBeUpdateName(){
+    @DisplayName("Update name")
+    public void userCanBeUpdateName() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         User changedUser = UserGenerator.getChangedNameUser();
         String changedName = changedUser.getName();
         ValidatableResponse responseUpdateName = userClient.updateAuthorizedUserData(accessToken, UserData.from(changedUser));

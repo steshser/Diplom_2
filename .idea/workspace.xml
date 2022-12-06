@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="add update email to same test" />
+    <list default="true" id="d878552e-dded-42ed-9838-b5c332cfb21c" name="Changes" comment="update email to existing test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ingredients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ingredients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IngredientsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IngredientsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IngredientsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IngredientsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrdersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrdersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RefreshToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithAuthorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithoutAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCreateOrderWithoutAuthorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestGetAuthorizedUserOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestGetAuthorizedUserOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestGetUnauthorizedUserOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestGetUnauthorizedUserOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestLoginExistingUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestLoginExistingUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestLoginInvalidData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestLoginInvalidData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRegisterExistingUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRegisterExistingUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRegisterUserWithoutData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRegisterUserWithoutData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRegisterValidUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRegisterValidUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestUpdateAuthorizedUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUpdateAuthorizedUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestUpdateUnauthorizedUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUpdateUnauthorizedUserData.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +48,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IDsEPqjcr2MaJcmREwRFP0zkOw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,12 +72,13 @@
       <recent name="C:\Users\User\IdeaProjects\Diplom_2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToExisting">
-    <configuration name="TestRegisterValidUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestCreateOrderWithoutAuthorization.unauthorizedUserCanCreateOrder">
+    <configuration name="TestCreateOrderWithoutAuthorization.unauthorizedUserCanCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestRegisterValidUser" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="TestCreateOrderWithoutAuthorization" />
+      <option name="METHOD_NAME" value="unauthorizedUserCanCreateOrder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCreateOrderWithoutAuthorization.unauthorizedUserCanCreateOrder" />
         <item itemvalue="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToExisting" />
         <item itemvalue="JUnit.TestUpdateAuthorizedUserData.userCanNotBeUpdateEmailToSame" />
         <item itemvalue="JUnit.TestUpdateUnauthorizedUserData" />
         <item itemvalue="JUnit.TestUpdateAuthorizedUserData" />
-        <item itemvalue="JUnit.TestRegisterValidUser" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670157451244</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update email to existing test">
+      <created>1670158135450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670158135450</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +194,7 @@
     <MESSAGE value="add tests for orders endpoints" />
     <MESSAGE value="add tests for create order cases" />
     <MESSAGE value="add update email to same test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add update email to same test" />
+    <MESSAGE value="update email to existing test" />
+    <option name="LAST_COMMIT_MESSAGE" value="update email to existing test" />
   </component>
 </project>

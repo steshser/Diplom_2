@@ -7,11 +7,11 @@ public class UserData {
         this.name = name;
     }
 
-    public static UserData from(User user){
-        return new UserData(user.getEmail(), user.getName());
+    public UserData() {
     }
 
-    public UserData() {
+    public static UserData from(User user) {
+        return new UserData(user.getEmail(), user.getName());
     }
 
     public String getEmail() {

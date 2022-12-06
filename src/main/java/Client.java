@@ -3,7 +3,6 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 public class Client {
-
     private static final String BASE_URL = "https://stellarburgers.nomoreparties.site/";
 
     protected RequestSpecification getSpec() {

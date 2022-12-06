@@ -1,9 +1,12 @@
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestLoginExistingUser {
 
@@ -19,13 +22,9 @@ public class TestLoginExistingUser {
     }
 
     @Test
-    @Step("Login valid user")
-    public void userCanLogin(){
+    @DisplayName("Login valid user")
+    public void userCanLogin() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         ValidatableResponse responseLogin = userClient.login(UserCredentials.from(user));
         int actualStatusCodeLogin = responseLogin.extract().statusCode();
         boolean isSuccessInMessageTrueLogin = responseLogin.extract().path("success");

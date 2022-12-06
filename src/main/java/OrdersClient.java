@@ -1,11 +1,13 @@
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 
 import static io.restassured.RestAssured.given;
 
-public class OrdersClient extends Client{
+public class OrdersClient extends Client {
     private static final String ORDERS_PATH = "api/orders";
     private static final String ALL_ORDERS_PATH = "api/orders/all";
 
+    @Step("Get authorized user orders list")
     public ValidatableResponse getUserOrders(String accessToken) {
         return given()
                 .spec(getSpec())
@@ -15,6 +17,7 @@ public class OrdersClient extends Client{
                 .then();
     }
 
+    @Step("Get unauthorized user orders list")
     public ValidatableResponse getUnauthorizedUserOrders() {
         return given()
                 .spec(getSpec())
@@ -23,6 +26,7 @@ public class OrdersClient extends Client{
                 .then();
     }
 
+    @Step("Get all orders list")
     public ValidatableResponse getAllOrders() {
         return given()
                 .spec(getSpec())
@@ -31,6 +35,7 @@ public class OrdersClient extends Client{
                 .then();
     }
 
+    @Step("Create order by unauthorized user with ingredients")
     public ValidatableResponse createOrderUnauthorizedUserWithIngredients(Ingredients ingredients) {
         return given()
                 .spec(getSpec())
@@ -40,6 +45,7 @@ public class OrdersClient extends Client{
                 .then();
     }
 
+    @Step("Create order by authorized user with ingredients")
     public ValidatableResponse createOrderAuthorizedUserWithIngredients(String accessToken, Ingredients ingredients) {
         return given()
                 .spec(getSpec())
@@ -50,6 +56,7 @@ public class OrdersClient extends Client{
                 .then();
     }
 
+    @Step("Create order by unauthorized user without ingredients")
     public ValidatableResponse createOrderUnauthorizedUserWithoutIngredients() {
         return given()
                 .spec(getSpec())
@@ -58,6 +65,7 @@ public class OrdersClient extends Client{
                 .then();
     }
 
+    @Step("Create order by authorized user without ingredients")
     public ValidatableResponse createOrderAuthorizedUserWithoutIngredients(String accessToken) {
         return given()
                 .spec(getSpec())
@@ -66,5 +74,4 @@ public class OrdersClient extends Client{
                 .post(ORDERS_PATH)
                 .then();
     }
-
 }

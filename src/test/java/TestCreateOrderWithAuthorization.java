@@ -1,8 +1,10 @@
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -25,14 +27,10 @@ public class TestCreateOrderWithAuthorization {
     }
 
     @Test
-    @Step("Create order by authorized user")
+    @DisplayName("Create order by authorized user")
     public void authorizedUserCanCreateOrder() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         // create order with all ingredients
         ValidatableResponse responseIngredients = ingredientsClient.getIngredients();
         ArrayList<HashMap<String, String>> responseData = responseIngredients.extract().path("data");
@@ -46,14 +44,10 @@ public class TestCreateOrderWithAuthorization {
     }
 
     @Test
-    @Step("Create order by authorized user with invalid ingredients hash")
+    @DisplayName("Create order by authorized user with invalid ingredients hash")
     public void authorizedUserCanNotCreateOrderWithInvalidIngredients() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         Ingredients ingredients = IngredientsGenerator.getInvalidIngredientsHash();
         // create order
         ValidatableResponse responseCreateOrder = ordersClient.createOrderAuthorizedUserWithIngredients(accessToken, ingredients);
@@ -62,14 +56,10 @@ public class TestCreateOrderWithAuthorization {
     }
 
     @Test
-    @Step("Create order by authorized user without ingredients")
+    @DisplayName("Create order by authorized user without ingredients")
     public void authorizedUserCanNotCreateOrderWithoutIngredients() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         ValidatableResponse responseCreateOrder = ordersClient.createOrderAuthorizedUserWithoutIngredients(accessToken);
         int actualStatusCodeCreateOrder = responseCreateOrder.extract().statusCode();
         boolean isSuccessInMessageFalseCreateOrder = responseCreateOrder.extract().path("success");
@@ -80,7 +70,7 @@ public class TestCreateOrderWithAuthorization {
     }
 
     @After
-    @Step("Delete user")
+    @DisplayName("Delete user")
     public void cleanUp() {
         userClient.deleteUser(accessToken);
     }

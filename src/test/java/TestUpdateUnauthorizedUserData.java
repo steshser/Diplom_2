@@ -1,9 +1,11 @@
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class TestUpdateUnauthorizedUserData {
     private UserClient userClient;
@@ -15,7 +17,7 @@ public class TestUpdateUnauthorizedUserData {
     }
 
     @Test
-    @Step("Update email")
+    @DisplayName("Update email")
     public void unauthorizedUserCanNotUpdateEmail() {
         User changedUser = UserGenerator.getChangedEmailUser();
         ValidatableResponse responseUpdateName = userClient.updateUnauthorizedUserData(UserData.from(changedUser));
@@ -28,7 +30,7 @@ public class TestUpdateUnauthorizedUserData {
     }
 
     @Test
-    @Step("Update name")
+    @DisplayName("Update name")
     public void unauthorizedUserCanNotUpdateName() {
         User changedUser = UserGenerator.getChangedNameUser();
         ValidatableResponse responseUpdateName = userClient.updateUnauthorizedUserData(UserData.from(changedUser));

@@ -1,9 +1,12 @@
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestGetAuthorizedUserOrders {
     private UserClient userClient;
@@ -20,14 +23,10 @@ public class TestGetAuthorizedUserOrders {
     }
 
     @Test
-    @Step("Get orders list of authorized user")
+    @DisplayName("Get orders list of authorized user")
     public void canGetOrdersListOfAuthorizedUser() {
         ValidatableResponse responseRegister = userClient.register(user);
-        int actualStatusCodeCreate = responseRegister.extract().statusCode();
-        boolean isSuccessInMessageTrueCreate = responseRegister.extract().path("success");
         accessToken = responseRegister.extract().path("accessToken");
-        assertEquals(200, actualStatusCodeCreate);
-        assertTrue(isSuccessInMessageTrueCreate);
         ValidatableResponse responseUserOrders = ordersClient.getUserOrders(accessToken);
         int actualStatusCodeOrders = responseUserOrders.extract().statusCode();
         boolean isSuccessInMessageTrueOrders = responseUserOrders.extract().path("success");
